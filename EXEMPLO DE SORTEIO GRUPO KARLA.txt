@@ -1,0 +1,39 @@
+@SORTEIO COM STRING E DEFINIÇÃO DE PESSOAS@
+
+package br.com.teste;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.*;
+public class Sorteio {
+	public static String sorteia (){
+		List<String> lista = new ArrayList<String>();
+		lista.add ("Maria") ; 
+		lista.add ("Pedro") ;
+		lista.add ("João") ;
+		lista.add ("Francisco") ;
+		lista.add ("Luiza") ;
+		lista.add ("Maristela") ;
+		lista.add ("Anderson") ;
+		lista.add ("Helena") ;
+		lista.add ("Patricia") ;
+		lista.add ("Daniele") ;
+		Collections.shuffle(lista) ;
+		// pega qualquer indice.
+		return lista.get((int)Math.random() * lista.size());
+	}
+	public static void main(String []args){
+		Set sorteados = new HashSet();
+		String aux = "";
+		for(int i = 0; i<3; i++){
+			boolean novo = false;
+			while (!novo) {
+				aux = sorteia();
+				if (!sorteados.contains(aux)) {
+					System.out.println(aux);
+					novo = true;
+					sorteados.add(aux);
+				}
+			}
+		}
+	}
+}
