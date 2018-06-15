@@ -1,0 +1,18 @@
+Sprint 15/06/2018
+Tarefa 1 -  Criar o git com para o projeto.
+Tarefa 2 - Atividades da semana - analisar e administrar os acessos, pulls requersts e merge os comites dos membros da equipe
+Tarefa 2 - Criação do banco de dados  "ou definição das classes java e usar o hibernate"
+
+
+Status
+
+Tarefa 1 - ok
+Tarefa 2 - Parcial - AGUARDANDO COMITS DE FERNANDO E MATHEUS
+Tarefa 3 -  não foi possivel realizar a atividade
+
+
+Sprint 22/06/2018
+Tarefas para proxima semana:
+Tarefa 1 - Atividades da semana - analisar e administrar os acessos, pulls requersts e merge os comites dos membros da equipe
+Tarefa 2 - Criação do banco de dados  "ou definição das classes java e usar o hibernate"
+
