@@ -5,6 +5,38 @@ body {
     margin: 0;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #1BA39C;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -43,6 +75,23 @@ body {
     font-size: large;
     color: #fff;
     margin-bottom: 10px
+}
+
+.formulario {
+    padding-left: 15px;
+    padding-top: 15px;
+    justify-content: center;
+
+}
+
+.header {
+    text-align: center;
+    justify-content: center;
+}
+
+.footer {
+    padding: 15px;
+    text-align: center;
 }
 
 @media screen and (max-width:340px){
