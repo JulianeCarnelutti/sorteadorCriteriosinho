@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css?family=Lato");
 
 body {
@@ -50,4 +51,107 @@ body {
         width: 100vw;
         height: 100vh
     }
+=======
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #1BA39C;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #6C7A89;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.form-box {
+    width: 300px;
+    background: #fff;
+    font-family: Lato;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top: 10px solid #1BA39C 
+}
+
+.form-box .form-input {
+    border: none;
+    background: #eee;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 10px
+}
+
+.form-box .form-btn {
+    border: none;
+    background: #1BA39C;
+    width: 100%;
+    height: 50px;
+    font-size: large;
+    color: #fff;
+    margin-bottom: 10px
+}
+
+.formulario {
+    padding-left: 15px;
+    padding-top: 15px;
+    justify-content: center;
+
+}
+
+.header {
+    text-align: center;
+    justify-content: center;
+}
+
+.footer {
+    padding: 15px;
+    text-align: center;
+}
+
+@media screen and (max-width:340px){
+    .form-box {
+        width: 100vw;
+        height: 100vh
+    }
+>>>>>>> branch 'master' of https://github.com/JulianeCarnelutti/sorteadorCriteriosinho.git
 }
