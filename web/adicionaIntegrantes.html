@@ -16,20 +16,22 @@
 
     <nav>
         <ul>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="historico.html">Historico</a></li>
+            <li><a href="CadastroSorteador.html">Sortear Grupos</a></li>
+            <li><a href="adicionaIntegrantes.html">Adicionar Integrante</a></li>
+            <li><a href="cadastro.html">Cadastrar Turma</a></li>
+            <li><a class="active" href="index.html">Inicio</a></li>
         </ul>
     </nav>
 
     <div class="formulario">
         <h2>Adicionar Integrantes</h2>
         <form action="/action_page.php">
-            Nome: <input type="text" name="nome" placeholder="Nome completo"><br>
-            Nascimento: <input type="date" name="nascimento" placeholder="00/00/0000"><br>
-            Endereço: <input type="text" name="endereco" placeholder="Endereço completo"><br>
-            Referência: <input type="text" name="referencia" placeholder="Referência para o sorteio"><br>
-            E-mail: <input type="email" name="email"><br>
+            Nome: <input id="nome" type="text" name="nome" placeholder="Nome completo" class=form-input><br>
+            Nascimento: <input id="nascimento" type="date" name="nascimento" placeholder="00/00/0000" class=form-input><br>
+            Endereço: <input id="endereco" type="text" name="endereco" placeholder="Endereço completo" class=form-input><br>
+            Referência: <input id="referencia" type="text" name="referencia" placeholder="Referência para o sorteio" class=form-input><br>
+            E-mail: <input id="email" type="email" name="email" class=form-input><br>
 
             <br>
             <input type="submit" value="Submit">
