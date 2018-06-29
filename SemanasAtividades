@@ -13,7 +13,7 @@ KARLA - Elaborar ou pesquisar um algoritmo de sorteio pronto
 FERNANDO - Prototipar tela de cadastro de usu√°rio (editar xml e enviar)
 MATHEUS - Prototipar tela de cria√ß√£o de turma
 GUSTAVO - Prototipar tela de sorteio dos grupos
-JULIANE - CriaÁ„o do banco de dados "ou definir as classes java e usar o hibernate"
+JULIANE - Cria√ß√£o do banco de dados "ou definir as classes java e usar o hibernate"
 MARCELO - Prototipar uma tela de logs com o hist√≥rico de grupos sorteados
 LUCAS - Prototipa√ß√£o tela de adicionar integrantes a turma
 
@@ -27,9 +27,20 @@ MATHEUS -MENU DE SELE«√O DE TELA
 KARLA -PAGINA INICIAL
 
 Atividades semana 3:
--TELA SORTEIO (BACK END) 
+FERNANDO-TELA CADASTRO (BACK END) 
 -TELA LOGIN (BACK END)
--TELA PERFIL (BACK END)
--TELA CRIAR TURMA E ADICIONAR INTEGRANTES (BACK END)
--TESTES
-JULIANE - CRIA«√O DO BANCO DE DADOS "OU DEFINIR AS CLASSES JAVA E USAR O HIBERNATE"
+MARCELO-TELA PERFIL (BACK END) 
+LUCAS -TELA CRIAR TURMA E ADICIONAR INTEGRANTES (BACK END)
+MATHEUS -MENU DE SELE«√O DE TELA (BACK END)
+KARLA -PAGINA INICIAL(BACK END)
+JULIANE - Cria√ß√£o do banco de dados "ou definir as classes java e usar o hibernate"
+
+Atividades semana 4:
+FERNANDO-TELA CADASTRO (BACK END) CONTINUA«√O 
+-TELA LOGIN (BACK END)CONTINUA«√O
+MARCELO-TELA PERFIL (BACK END) CONTINUA«√O
+LUCAS -TELA CRIAR TURMA E ADICIONAR INTEGRANTES (BACK END)CONTINUA«√O
+MATHEUS -MENU DE SELE«√O DE TELA (BACK END)CONTINUA«√O
+KARLA -PAGINA INICIAL(BACK END) CONTINUA«√O
+JULIANE - Cria√ß√£o do banco de dados "ou definir as classes java e usar o hibernate" CONTINUA«√O
+GUSTAVO - VALIDA«√O CADASTRO DE SORTEADOR
