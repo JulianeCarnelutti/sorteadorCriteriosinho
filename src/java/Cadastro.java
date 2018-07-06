@@ -1,45 +1,19 @@
 
 
-public class BeanCadastro {
-	
-	private String nome;
-	private String email;
-	private String senha;
-	private String CPF;
-	
-	
-	public String getNome() {
-		return nome;
-	}
+public class Cadastro {
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	private EntityManager em = Persistence.createEntityManagerFactory("sorteadorCriteriosinho").createEntityManager();
+
+	public void cadastrar(String nome, String email, String senha, String cpf) {
+		Usuario u = new Usuario();
+		u.setNome(nome);
+		u.setEmail(email);
+		u.setSenha(senha);
+		u.setCpf(cpf);
 		
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getSenha() {
-		return senha;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
-	
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-	
-	public void cadastrar() {
+		em.getTransaction().begin();
+		em.persist(u);
+		em.getTransaction().commit();
 	}
 
 
