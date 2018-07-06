@@ -9,23 +9,23 @@
 </head>
 
 <body>
-    
+<!--     
     <header class="header">
         <h1>sorteadorCriteriosinho</h1>
-    </header>
+    </header>  -->
 
     <nav>
         <ul>
         	<li><a href="telaPerfil.html">Perfil</a></li>
-            <li><a href="historico.html">Historico</a></li>
+            <li><a href="historico.html">Histórico</a></li>
             <li><a href="CadastroSorteador.html">Sortear Grupos</a></li>
-            <li><a href="adicionaIntegrantes.html">Adicionar Integrante</a></li>
+            <li><a class="active" href="adicionaIntegrantes.html">Adicionar Integrante</a></li>
             <li><a href="cadastro.html">Cadastrar Turma</a></li>
-            <li><a class="active" href="index.html">Inicio</a></li>
+            <li><a href="index.html">Início</a></li>
         </ul>
     </nav>
 
-    <div class="formulario">
+    <div class="form-box">
         <h2>Adicionar Integrantes</h2>
         <form action="/action_page.php">
             Nome: <input id="nome" type="text" name="nome" placeholder="Nome completo" class=form-input><br>
@@ -35,8 +35,8 @@
             E-mail: <input id="email" type="email" name="email" class=form-input><br>
 
             <br>
-            <input type="submit" value="Submit">
-            <input type="reset">
+            <input type="submit" value="Enviar" class="form-btn">
+            <input type="reset" value="Limpar" class="form-btn">
         </form> 
     </div>
 
