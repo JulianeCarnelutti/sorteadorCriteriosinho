@@ -5,12 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Sorteador De Grupos</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <script>
+            function cadastrarUsuario() {
+                var elCadNome = document.getElementById("cadNome");
+                var elCadEmail = document.getElementById("cadEmail");
+                var elCadEmail = document.getElementById("cadCPF");
+                var elCadSenha = document.getElementById("cadSenha");
+                
+                var usuario = {
+                    nome: elCadNome.value,
+                    email: elCadEmail.value,
+                    CPF: elCadCPF.value,
+                    senha: elCadSenha.value
+                    
+                };
+                
+                var req = new XMLHttpRequest();
+                req.onreadystatechange = function() {
+                    if (this.readyState == XMLHttpRequest.DONE) {
+                            //&& this.status == 201) {
+                        alert("Usuário criado!");
+                    }
+                }
+                req.open("POST", "usuarios/" + usuario.email, true);
+                req.setRequestHeader(
+                        "Content-Type", 
+                        "application/json");
+                req.send(JSON.stringify(usuario));
+            }
+            
+/*            function buscarUsuario() {
+                var elBuscaEmail = document.getElementById("buscaEmail");
+                var elDivNome = document.getElementById("divNome");
+                var email = elBuscaEmail.value;
+                
+                var req = new XMLHttpRequest();
+                req.onreadystatechange = function() {
+                    if (this.readyState == XMLHttpRequest.DONE) {
+                            //&& this.status == 201) {
+                        var usuario = JSON.parse(this.responseText);
+                        elDivNome.innerText = usuario.nome;
+                    }
+                }
+                req.open("GET", "usuarios/" + email, true);
+                req.send();
+            }
+*/
+        </script>
 </head>
 <body>
 
     <nav>
         <ul>
-        	<li><a href="telaPerfil.html">Perfil</a></li>
+            <li><a href="telaPerfil.html">Perfil</a></li>
             <li><a href="historico.html">Histórico</a></li>
             <li><a href="sorteio.html">Sortear Grupos</a></li>
             <li><a href="adicionaIntegrantes.html">Adicionar Integrante</a></li>
@@ -19,6 +66,7 @@
         </ul>
     </nav>
         
+        
     <div class="container">
         <div class="form-box">
             <form action="" method="post">
@@ -26,23 +74,12 @@
                     <h1>Cadastro</h1>
                 </div>
 
-                <div>
-                Nome: <input type="text" name="nome" class="form-input">
-                </div>
-                
-                <div>
-                E-mail: <input type="text" name="email" class="form-input">
-                </div>
-                
-                <div>
-                CPF: <input type="text" name="cpf" class="form-input">
-                </div>
+                <div>Nome: <input type="text" name="nome" class="form-input" id="cadNome"> </div>
+                <div>E-mail: <input type="text" name="email" class="form-input" id="cadEmail"> </div>
+                <div>CPF: <input type="text" name="cpf" class="form-input" id="cadCPF"> </div>	
+		<div>Senha: <input type="text" name="senha" class="form-input" id="cadSenha"> </div>
 				
-				<div>
-                Senha: <input type="text" name="senha" class="form-input">
-                </div>
-				
-				<div>
+		<div>
                     <input type="submit" value="Cadastrar" class="form-btn">
                 </div>
               

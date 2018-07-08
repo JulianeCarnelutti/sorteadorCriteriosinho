@@ -10,22 +10,24 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <script>
             function cadastrarUsuario() {
-                var elCadEmail = document.getElementById("cadEmail");
-                var elCadSenha = document.getElementById("cadSenha");
                 var elCadNome = document.getElementById("cadNome");
+                var elCadEmail = document.getElementById("cadEmail");
+                var elCadEmail = document.getElementById("cadCPF");
+                var elCadSenha = document.getElementById("cadSenha");
                 
                 var usuario = {
+                    nome: elCadNome.value,
                     email: elCadEmail.value,
-                    senha: elCadSenha.value,
-                    nome: elCadNome.value
+                    CPF: elCadCPF.value,
+                    senha: elCadSenha.value
+                    
                 };
                 
                 var req = new XMLHttpRequest();
                 req.onreadystatechange = function() {
                     if (this.readyState == XMLHttpRequest.DONE) {
                             //&& this.status == 201) {
-                        //alert("Usuário criado!");
-                        alert("Status: " + this.status);
+                        alert("Usuário criado!");
                     }
                 }
                 req.open("POST", "usuarios/" + usuario.email, true);
@@ -35,7 +37,7 @@ and open the template in the editor.
                 req.send(JSON.stringify(usuario));
             }
             
-            function buscarUsuario() {
+/*            function buscarUsuario() {
                 var elBuscaEmail = document.getElementById("buscaEmail");
                 var elDivNome = document.getElementById("divNome");
                 var email = elBuscaEmail.value;
@@ -51,6 +53,7 @@ and open the template in the editor.
                 req.open("GET", "usuarios/" + email, true);
                 req.send();
             }
+*/
         </script>
     </head>
     <body>

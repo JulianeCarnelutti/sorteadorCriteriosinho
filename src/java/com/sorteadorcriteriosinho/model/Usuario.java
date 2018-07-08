@@ -11,11 +11,7 @@ package com.sorteadorcriteriosinho.model;
  */
 public class Usuario {
     	
-	private String nome;
-	private String email;
-	private String senha;
-	private String CPF;
-        
+	private String nome, email, CPF, senha;
 
     public String getNome() {
         return nome;
