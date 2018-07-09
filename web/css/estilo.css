@@ -33,6 +33,11 @@ li a:hover {
     background-color: #111;
 }
 
+table, th, td {
+  	border: 1px solid #333;
+   	border-collapse: collapse;
+}
+
 .active {
     background-color: #1BA39C;
 }
@@ -48,7 +53,7 @@ li a:hover {
 }
 
 .form-box {
-    width: 300px;
+    width: 500px;
     background: #fff;
     font-family: Lato;
     text-align: center;
@@ -60,10 +65,10 @@ li a:hover {
 .form-box .form-input {
     border: none;
     background: #eee;
-    width: 100%;
+    width: 75%;
     height: 50px;
     text-align: center;
-    font-size: large;
+    font-size: smaller;
     margin-bottom: 10px
 }
 
@@ -92,6 +97,16 @@ li a:hover {
 .footer {
     padding: 15px;
     text-align: center;
+    background: #6C7A89;
+    color: #fff;
+}
+
+.grupo {
+    width: 7%
+}
+
+.integrantes {
+    width: 93%
 }
 
 @media screen and (max-width:340px){
