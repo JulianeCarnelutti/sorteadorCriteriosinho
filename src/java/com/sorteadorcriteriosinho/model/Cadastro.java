@@ -15,7 +15,7 @@ import javax.persistence.Persistence;
 
 public class Cadastro {
 	
-private static Cadastro instancia;
+	private static Cadastro instancia;
     
     public static Cadastro obterInstancia() {
         if (instancia == null)
@@ -23,20 +23,27 @@ private static Cadastro instancia;
         return instancia;
     }
     
+    // controlador, salva os usuarios
     private EntityManager em = Persistence.createEntityManagerFactory("sorteadorCriteriosinho").createEntityManager();
 
-    public void cadastrar(String nome, String email, String senha, String cpf) {
-        Usuario u = new Usuario();
-        u.setNome(nome);
+    // metodo pra salvar o usuario
+    public void cadastrar(String email, String cpf, String nome, String senha) {
+    
+    	// criar usuario
+    	Usuario u = new Usuario();
         u.setEmail(email);
-        u.setSenha(senha);
         u.setCpf(cpf);
+        u.setNome(nome);
+        u.setSenha(senha);
 
+        // processo de salvar usuario
         em.getTransaction().begin();
         em.persist(u);
         em.getTransaction().commit();
+        
     }
     
+    // encontra um usuario pelo email
     public Usuario obterUsuario(String email) {
         return em.find(Usuario.class, email);
     }
