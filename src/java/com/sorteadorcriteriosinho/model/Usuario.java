@@ -5,13 +5,22 @@
  */
 package com.sorteadorcriteriosinho.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author LucasReinaldo
  */
+
+@Entity
+@Table
 public class Usuario {
     	
-	private String nome, email, CPF, senha;
+	@id
+	private String email;
+	private String nome, CPF, senha;
 
     public String getNome() {
         return nome;

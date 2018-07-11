@@ -47,6 +47,7 @@ public class RecursoUsuario {
         JsonObject objeto = Json.createObjectBuilder()
                 .add("email", u.getEmail())
                 .add("senha", u.getSenha())
+                .add("CPF", u.getCPF())
                 .add("nome", u.getNome()).build();
         return Response.ok(objeto.toString()).build();
         */
