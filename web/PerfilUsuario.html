@@ -18,7 +18,7 @@
         </ul>
 	</nav>
 	
-<body onLoad='terminarEdicao()'>
+<body onLoad='terminarEdicao(); atualizarUsuario()'>
     <div class="container">
         <div class="form-box" style="width: 617px;" id='divPrincipal'>
   				<fieldset>
@@ -26,10 +26,10 @@
 			    <legend>Informações Pessoais</legend>
 			    <br>
 			    <echo>Nome: </echo><echo id='nome'> </echo><br><br>
-			    <echo>Idade: </echo><echo id='idade'> </echo><br><br>
-			    <echo>Sexo: </echo><echo id='sexo'> </echo><br><br>
+			    <echo>email: </echo><echo id='email'> </echo><br><br>
+			    <echo>CPF: </echo><echo id='cpf'> </echo><br><br>
 			    <echo>Turmas Matriculadas: </echo><echo> Engenharia de Software</echo><br><br>
-			    <echo>Grupos Vinculados: </echo><echo> 3</echo><br><br>
+			    <echo>Grupos Vinculados: </echo><echo> 1</echo><br><br>
 			    
 			    <a href="index.html"><input type="submit" value="Voltar" id="btnVoltar"/></a>
 			    <a style="margin-left: 50%"><input type="submit" value="Editar" id="btnEditar" onClick='editar()'/></a>
@@ -41,8 +41,8 @@
 
 			    	<legend>Editar Informações Pessoais</legend>
 			    	Nome: <input id="nomeEditar" type="text" name="nome" placeholder="Nome completo"><br>
-            		Idade: <input id="idadeEditar" type="text" name="idade" placeholder="Ex: 20"><br>
-        		    Sexo: <input id="sexoEditar" type="text" name="sexo" placeholder="Ex: Masculino"><br>
+            		email: <input id="emailEditar" type="text" name="email" placeholder="email@email.com"><br>
+        		    cpf: <input id="cpfEditar" type="text" name="cpf" placeholder="12345678914"><br>
         		    
 					<input type="button" value="Voltar" id="btnVoltar" onClick='terminarEdicao()'/>
 					<a style="margin-left: 50%"><input type="submit" value="Salvar" id="btnSalvar"/></a>
@@ -54,9 +54,6 @@
     	<p> &copy; 2018 - 4 Fase ADS - USJ</p>
 	</footer>   
 	  				<script type="text/javascript">
-  						document.getElementById('nome').innerText = 'Marcelo Melo';
-  						document.getElementById('idade').innerText = '20';
-  						document.getElementById('sexo').innerText = 'Masculino';
   						
   						function editar(){
   							document.getElementById('divPrincipal').style.display = "none";
@@ -66,6 +63,24 @@
   							document.getElementById('divPrincipal').style.display = "block";
   							document.getElementById('divEditar').style.display = "none";
   						}
+  						
+  						
+  			            function atualizarUsuario() {
+  			                var xhttp = new XMLHttpRequest();
+  			                xhttp.onreadystatechange = function() {
+  			                    if (this.readyState == XMLHttpRequest.DONE
+  			                            && this.status == 200) {
+  			                        var usuario = JSON.parse(this.responseText);
+  			                    document.getElementById('nome').innerText = usuario.nome;
+  		  						document.getElementById('email').innerText = usuario.email;
+  		  						document.getElementById('cpf').innerText = usuario.CPF;
+  			                    }
+  			                };
+  			                xhttp.open("GET", "/email", true);
+  			                xhttp.setRequestHeader("Accept", "application/json");
+  			                xhttp.send();
+  			            }
+  			            
   						
 					</script> 
 </body>
