@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<nav>
+        <ul>
+        	<li><a href="PerfilUsuario.html">Perfil</a></li>
+            <li><a href="HistoricoGrupos.html">Histórico</a></li>
+            <li><a class="active" href="SortearGrupos.html">Sortear Grupos</a></li>
+            <li><a href="AdicionaIntegrantes.html">Adicionar Integrante</a></li>
+            <li><a href="CadastroTurma.html">Cadastrar Turma</a></li>
+            <li><a href="index.html">Início</a></li>
+        </ul>
+    </nav>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="" method="post">
+                <div>
+                    <h1>Sorteio</h1>
+                </div>
+
+				<div>
+                    <input type="submit" value="Selecionar Turma" class="form-btn">
+                </div>
+				
+				<!--<div>
+				Quantidade de grupos:
+				<select id=quantidadeGrupos class="form-btn" >
+					<option>2</option>
+					<option>3</option>
+				</select>
+				</div> !-->
+				
+				<div> Quantidade de gupos:
+                    <input type="text" name="quantidadeGrupos" class="form-input">
+                </div>
+				
+				<div>
+				Tipo Sorteio
+				<select id=tipoSorteio class="form-btn" >
+					<option>Aleatório</option>
+					<option>Grupos por gênero</option>
+					<option>Grupos por proximidade</option>
+					
+					
+				</select>
+				</div>
+
+                <div>
+                    <input type="submit" value="Sortear" class="form-btn">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

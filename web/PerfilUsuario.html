@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+    <nav>
+        <ul>
+        	<li><a class="active" href="PerfilUsuario.html">Perfil</a></li>
+            <li><a href="HistoricoGrupos.html">Histórico</a></li>
+            <li><a href="SortearGrupos.html">Sortear Grupos</a></li>
+            <li><a href="AdicionaIntegrantes.html">Adicionar Integrante</a></li>
+            <li><a href="CadastroTurma.html">Cadastrar Turma</a></li>
+            <li><a href="index.html">Início</a></li>
+        </ul>
+	</nav>
+	
+<body onLoad='terminarEdicao(); atualizarUsuario()'>
+    <div class="container">
+        <div class="form-box" style="width: 617px;" id='divPrincipal'>
+  				<fieldset>
+
+			    <legend>Informações Pessoais</legend>
+			    <br>
+			    <echo>Nome: </echo><echo id='nome'> </echo><br><br>
+			    <echo>email: </echo><echo id='email'> </echo><br><br>
+			    <echo>CPF: </echo><echo id='cpf'> </echo><br><br>
+			    <echo>Turmas Matriculadas: </echo><echo> Engenharia de Software</echo><br><br>
+			    <echo>Grupos Vinculados: </echo><echo> 1</echo><br><br>
+			    
+			    <a href="index.html"><input type="submit" value="Voltar" id="btnVoltar"/></a>
+			    <a style="margin-left: 50%"><input type="submit" value="Editar" id="btnEditar" onClick='editar()'/></a>
+			  </fieldset>
+        </div>
+        <div>
+        	<div class="form-box" style="width: 617px; " id='divEditar'>
+  				<fieldset>
+
+			    	<legend>Editar Informações Pessoais</legend>
+			    	Nome: <input id="nomeEditar" type="text" name="nome" placeholder="Nome completo"><br>
+            		email: <input id="emailEditar" type="text" name="email" placeholder="email@email.com"><br>
+        		    cpf: <input id="cpfEditar" type="text" name="cpf" placeholder="12345678914"><br>
+        		    
+					<input type="button" value="Voltar" id="btnVoltar" onClick='terminarEdicao()'/>
+					<a style="margin-left: 50%"><input type="submit" value="Salvar" id="btnSalvar"/></a>
+			  </fieldset>
+        	</div>
+    </div>
+    
+	<footer class="footer">
+    	<p> &copy; 2018 - 4 Fase ADS - USJ</p>
+	</footer>   
+	  				<script type="text/javascript">
+  						
+  						function editar(){
+  							document.getElementById('divPrincipal').style.display = "none";
+  							document.getElementById('divEditar').style.display = "block";
+  						}
+  						function terminarEdicao(){
+  							document.getElementById('divPrincipal').style.display = "block";
+  							document.getElementById('divEditar').style.display = "none";
+  						}
+  						
+  						
+  			            function atualizarUsuario() {
+  			                var xhttp = new XMLHttpRequest();
+  			                xhttp.onreadystatechange = function() {
+  			                    if (this.readyState == XMLHttpRequest.DONE
+  			                            && this.status == 200) {
+  			                        var usuario = JSON.parse(this.responseText);
+  			                    document.getElementById('nome').innerText = usuario.nome;
+  		  						document.getElementById('email').innerText = usuario.email;
+  		  						document.getElementById('cpf').innerText = usuario.CPF;
+  			                    }
+  			                };
+  			                xhttp.open("GET", "/email", true);
+  			                xhttp.setRequestHeader("Accept", "application/json");
+  			                xhttp.send();
+  			            }
+  			            
+  						
+					</script> 
+</body>
+</html>
