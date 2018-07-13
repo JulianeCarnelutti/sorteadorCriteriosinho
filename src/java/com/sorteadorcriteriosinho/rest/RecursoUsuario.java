@@ -56,10 +56,10 @@ public class RecursoUsuario {
         JsonGenerator gerador = Json.createGenerator(writer);
         
         gerador.writeStartObject();
-        gerador.write("nome", u.getNome());
         gerador.write("email", u.getEmail());
-        gerador.write("CPF", u.getCPF());
         gerador.write("senha", u.getSenha());
+        gerador.write("CPF", u.getCPF());
+        gerador.write("nome", u.getNome());
 
         gerador.writeEnd();
         

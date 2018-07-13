@@ -1,58 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
     <head>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Meu Sistema | Login</title>
         <link rel="stylesheet" href="css/estilo.css">
+
+        <script>
+    
+        //funcao de busca do usuario
+        
+            function buscarUsuario() {
+                
+                /*
+                    PARTE QUE BUSCA ELEMENTOS DO HTML PELO ID E COLOCA ELES EM UMA VARIAVEL
+                **/
+                
+                var elBuscaEmail = document.getElementById("buscaEmail");
+                var elBuscaSenha = document.getElementById("buscaSenha");
+                var elDivNome = document.getElementById("divNome");
+                var email = elBuscaEmail.value;
+                
+                // ABRE A REQUISICAO
+
+                var req = new XMLHttpRequest();
+
+                /*
+                    NESSA PARTE O NOME DO USUARIO VAI SER APRESENTADO SE TIVER UMA RESPOSTA PRA REQUISICAO
+                **/
+                
+                req.onreadystatechange = function () {
+                    if (this.readyState == XMLHttpRequest.DONE) {
+                        //&& this.status == 201) {
+                        var usuario = JSON.parse(this.responseText);
+                        elDivNome.innerText = usuario.nome;
+                    }
+                }
+                
+                /*
+                    nessa parte o sitema prepara e envia uma requisicao pra classe RecursoUsuario pra RECEBER os dados do usuario
+                **/
+                
+                req.open("GET", "usuarios/" + email, true);
+                req.send();
+            }
+        </script>
     </head>
 
-    <script>
-        function buscarUsuario() {
-            var elBuscaEmail = document.getElementById("buscaEmail");
-            var elDivNome = document.getElementById("divNome");
-            var email = elBuscaEmail.value;
-
-            var req = new XMLHttpRequest();
-            req.onreadystatechange = function () {
-                if (this.readyState == XMLHttpRequest.DONE) {
-                    //&& this.status == 201) {
-                    var usuario = JSON.parse(this.responseText);
-                    elDivNome.innerText = usuario.nome;
-                }
-            }
-            req.open("GET", "usuarios/" + email, true);
-            req.send();
-        }
-    </script>
-
     <body>
-        
+    
+        <!-- 
+    		|------------------------------------------------|
+    		|												 |
+    		| parte que faz a busca de um usuario cadastrado |
+    		|												 |
+    		|------------------------------------------------|
+    	 -->
+    
         <div class="container">
             <div class="form-box">
-                <form action="" method="post">
-                    <div>
-                        <h1>Login</h1>
-                    </div>
-
-                    <div>
-                        <input type="text" placeholder="Informe seu e-mail" class="form-input" id="cadEmail">
-                    </div>
-                    
-                    <div>
-                        <input type="password" placeholder="Informe sua senha" class="form-input" id="cadSenha">
-                    </div>
-
-                    <div>
-                        <input type="submit" value="Entrar" class="form-btn">
-                    </div>
-
-                    <div>
-                        Não é registrado? <a href="CadastroUsuario.html">Crie uma conta</a>.
-                    </div>
-                </form>
+	            <div>
+	                <h1>Login</h1>
+	            </div>
+	
+	            <div>
+	                <input type="text" placeholder="Informe seu e-mail" class="form-input" id="buscaEmail">
+	            </div>
+	            
+	            <div>
+	                <input type="password" placeholder="Informe sua senha" class="form-input" id="buscaSenha">
+	            </div>
+	
+	            <div>
+	                <input type="submit" value="Entrar" class="form-btn" onclick="buscarUsuario()">
+	            </div>
+	
+	            <div>
+	                Não é registrado? <a href="CadastroUsuario.html">Crie uma conta</a>.
+	            </div>
             </div>
         </div>
+        
+        <div id="divNome"> </div>
         
         <footer class="footer">
             <p> &copy; 2018 - 4 Fase ADS - USJ</p>

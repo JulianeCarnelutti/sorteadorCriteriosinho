@@ -1,49 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Sorteador De Grupos</title>
-    <link rel="stylesheet" href="css/estilo.css">
-</head>
-<body>
-        
-    <div class="container">
-        <div class="form-box">
-            <form action="" method="post">
-                <div>
-                    <h1>Cadastro</h1>
-                </div>
 
-                <div>
-                Nome: <input type="text" name="nome" class="form-input">
-                </div>
-                
-                <div>
-                E-mail: <input type="text" name="email" class="form-input">
-                </div>
-                
-                <div>
-                CPF: <input type="text" name="cpf" class="form-input">
-                </div>
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cadastro Sorteador De Grupos</title>
+		<link rel="stylesheet" href="css/estilo.css">
+
+		<script>
+
+			// FUNCAO DE CADASTRO DE USUARIOS
+
+			function cadastrarUsuario() {
+
+                /*
+                    PARTE QUE BUSCA ELEMENTOS DO HTML PELO ID E COLOCA ELES EM UMA VARIAVEL
+                **/
+
+				var elCadEmail = document.getElementById("cadEmail");
+				var elCadSenha = document.getElementById("cadSenha");
+				var elCadCPF = document.getElementById("cadCPF");
+				var elCadNome = document.getElementById("cadNome");
+
+				/*
+                    PARTE ONDE SE CRIA UMA VARIAVEL COM OS ELEMENTOS QUE FORAM PEGOS 
+                **/
+
+				var usuario = {
+					email: elCadEmail.value,
+					senha: elCadSenha.value,
+					cpf: elCadCPF.value,
+					nome: elCadNome.value
+				};
 				
-				<div>
-                Senha: <input type="text" name="senha" class="form-input">
-                </div>
-				
-				<div>
-                    <input type="submit" value="Cadastrar" class="form-btn">
-                </div>
-              
-                Mudou de ideia? <a href="Login.html"> Voltar </a>
-                
-				
-            </form>
-        </div>
-    </div>
-    <footer class="footer">
-    	<p> &copy; 2018 - 4 Fase ADS - USJ</p>
-	</footer>   
+				// ABRE A REQUISICAO
+
+				var req = new XMLHttpRequest();
+
+				// NAO SEI 
+
+				req.onreadystatechange = function() {
+					if (this.readyState == XMLHttpRequest.DONE) {
+							//&& this.status == 201) {
+						//alert("Usuário criado!");
+						alert("Status: " + this.status);
+					}
+				}
+
+				// prepara e envia uma requisicao pra classe RecursoUsuario pra CADASTRAR os dados do usuario
+
+				req.open("POST", "usuarios/" + usuario.email, true);
+				req.setRequestHeader(
+						"Content-Type", 
+						"application/json");
+				req.send(JSON.stringify(usuario));
+
+			}
 	
-</body>
+		</script>
+	</head>
+
+	<body>
+			
+		<div class="container">
+			<div class="form-box">
+			
+				<!-- 
+	    			PARTE QUE FAZ O CADASTRO DE UM USUARIO
+	    	 	-->
+	    	 	
+				<div>
+					<h1>Cadastro</h1>
+				</div>
+
+				<div>
+					<input type="text" placeholder="Informe seu email" name="email" class="form-input" id="cadEmail">
+				</div>
+		
+				<div>
+					<input type="text" placeholder="Informe sea senha" name="senha" class="form-input" id="cadSenha">
+				</div>
+				
+				<div>
+					<input type="text" placeholder="Informe seu CPF" name="cpf" class="form-input" id="cadCPF">
+				</div>
+		
+				<div>
+					<input type="text" placeholder="Informe seu nome" name="nome" class="form-input" id="cadNome">
+				</div>
+			
+				<div>
+					<input type="submit" value="Cadastrar" class="form-btn" onclick="cadastrarUsuario()">
+				</div>
+			
+				Mudou de ideia? <a href="Login.html"> Voltar </a>
+					
+			</div>
+		</div>
+		<footer class="footer">
+			<p> &copy; 2018 - 4 Fase ADS - USJ</p>
+		</footer>   
+		
+	</body>
 </html>
