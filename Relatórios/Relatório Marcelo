@@ -1,0 +1,30 @@
+Marcelo Eduardo de Melo
+Relatório projeto SorteadorCriteriosinho (https://github.com/JulianeCarnelutti/sorteadorCriteriosinho)
+
+Semana 1 08/06/18:
+Na reunião do grupo foi definido as atividades a serem executadas para cada integrante realizar durante a semana.
+Na reunião realizei o commit com as definições de requisitos do sistema e a atrbuição de tarefas para cada membro da equipe dizendo a prototipação de tela para cada membro da equipe.
+
+Semana 2 15/06/18:
+Durante a semana 1 desenvolvi o protótipo da tela historicoGrupos com valores estáticos.
+Na reunião do grupo foi denifido as principais telas do sistema para serem desenvolvidas, deixando de lado minha tela historicoGrupos que tinha desenvolvido na semana 1, e sendo atribuida a nova atividade de desenvolver a tela PerfilUsuario. Na reunião realizei o commit do arquivo semanasAtividades com as novas atribuições de tarefas para cada membro da equipe.
+
+Semana 3 22/06/18:
+Durante a semana 2 realizei a prototipação em html da tela PerfilUsuario ,adicionada com informações estáticas até o banco estar disponível. Também foi editada a tela index indicando que o botão perfil é linkado a tela de PerfilUsuario.
+Na reunião do grupo foi definido que deveria ser iniciada o desenvolvimento back-end da tela em que estava responsável.
+
+Semana 4 29/06/2018:
+Durante a semana 3 realizei o commit adicionando os botões salvar e editar a tela PerfilUsuario, onde também adicionei o botão perfil no menu de seleção de tela nos arquivos: adicionarIntegrantes.html cadastro.html CadastroSorteador.html historico.html index.html e telaPerfil.html.
+Na reunião da semana 4 como o back-end das telas ainda não estava pronto, deveria ser feita a continuação do desenvolvimento back-end da tela em que estava responsável.
+
+Semana 5 06/07/2018:
+Durante a semana 4 realizei o commit adicionando formulário de edição na tela de PerfilUsuario, adicionado função de exibir e esconder a div do formulário ao clicar no botão editar. Também foi enviado no arquivo semanasAtividades a definição das atividades da semana 5 no arquivo SemanasAtividades.
+Na reunião da semana 5 foi definido novamente a continuação do desenvolvimento back-end da tela em que estava responsável sendo que ainda não havia conseguido pegar as informações do usuário do banco.
+
+Semana 6 11/07/2018: 
+Durante a semana 5 realizei o commit alterando as variaveis na tela PerfilUsuário e o começo da função buscar dados do usuário no banco.
+Foi encontrado um problema na busca de email, onde o sistema não conseguia encontrar o email do usuário.
+Na reunião da semana 6 foi verificado que o back-end de algumas telas ainda não estavam prontas, onde durante a semana seria continuado o back-end da tela em que estava responsável sendo que ainda não havia terminado a tela PerfilUsuario faltando conseguir buscar as informações do usuário no banco.
+
+Semana 7 13/07/2018:
+Durante a semana 6 vendo que o banco não ia ser criado, verifiquei com o professor uma maneira de pegar as informações do usuário sem utilizar o banco, então após criado e editado os arquivos necessários para fazer a função de pegar informações do usuário, realizei o commit adicionado RecursoPerfil para pegar as informações do cookie quando usuário logar no sistema, foi editado o arquivo RecursoUsuario adicionando cookie para salvar as informações do usuário quando o mesmo loga no sistema e por último também foi editado o arquivo PerfilUsuario para pegar e exibir na tela as informações do usuário logado no sistema.
