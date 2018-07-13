@@ -1,0 +1,34 @@
+Relatório das Atividades - 
+
+Semana 01 - 08/06/2018:
+  Atividade - Prototipar tela de criação de turma.
+    Não estava presente na primeira reunião da equipe para a definição do projeto.
+    A atividade de prototipar a tela de criação de turma foi passada para mim.
+    Foi desenvolvido um prototipo de tela de cadastro de turma em html.
+    adicionado uma pagina html para Login juntamente com o css que serviram como exemplo para o para os desenvolvimentos futuros da equipe.
+    
+Semana 02 - 15/06/2018:
+  Atividade - Desenvlver o Menu para seleção de tela.
+    Na segunda semana foi definida as atividades para a semana seguinte.
+    Eu fiquei responsavel pelo menu de seleção de telas.
+    Peguei como exemplo o menu que estava na pagina cadastroSosteador e repliquei em todas as paginas do projeto, com as paginas ja presentes no menu.
+    resolvi um conflina na sala com a ajuda do professor.
+  
+Semana 03 - 22/06/2018:
+  Atividade - Arrumar html.
+    Na terceira semana eu arrumei varias paginas html que nao estavam bem organizadas
+  
+Semana 04 - 29/06/2018:
+  Atividade - Corrigir partes do Sistema.
+    Na quarta semana eu comentei algumas partes do codigo pra ficar mais facil o entendimento.
+    ajustei algumas partes para que ficassem de acordo com o projeto.
+
+Semana 05 - 06/07/2018:
+  Atividade - Melhorar o sistema.
+    nessa semana eu entreguei com atraso a mudança mas fiz maiores alterações no sistema.
+
+Semana 06 - 13/07/2018:
+  Atividade - mudanças com Rest e Hibernate .
+    na sexta semana eu fiz maiores mudanças nas classes java para utilizar o hibernate.
+    criei algumas classes novas no sistema.
+    arrumei as classes de Rest nos html 
