@@ -18,7 +18,7 @@ import javax.persistence.Table;
 @Table
 public class Usuario {
     	
-	@id
+	@Id
 	private String email;
 	private String nome, CPF, senha;
 

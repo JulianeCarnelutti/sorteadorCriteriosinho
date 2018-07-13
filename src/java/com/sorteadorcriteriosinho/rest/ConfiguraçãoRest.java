@@ -23,7 +23,8 @@ public class ConfiguraçãoRest extends Application {
     public Set<Class<?>> getClasses() {
         Set<Class<?>> classes = new HashSet<>();
         Collections.addAll(classes, 
-                RecursoUsuario.class);
+                RecursoUsuario.class,
+                RecursoPessoa.class);
         return classes;
     }
     
