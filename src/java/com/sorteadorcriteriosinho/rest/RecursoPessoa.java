@@ -25,10 +25,10 @@ import javax.ws.rs.core.Response;
 
 /**
  *
- * @author LucasReinaldo
+ * @author MatheusReinaldo
  */
-@Path("/{email}")
-public class RecursoUsuario {
+@Path("/pessoas")
+public class RecursoPessoa {
     
     @PathParam("email")
     private String email;
@@ -72,13 +72,11 @@ public class RecursoUsuario {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response criarUsuario(JsonObject objeto) {
         String senha = objeto.getString("senha");
-        String CPF = objeto.getString("CPF");
         String nome = objeto.getString("nome");
         
         Usuario u = new Usuario();
         u.setEmail(objeto.getString("email"));
         u.setSenha(senha);
-        u.setSenha(CPF);
         u.setNome(nome);
         
         Cadastro.obterInstancia().adicionarUsuario(u);

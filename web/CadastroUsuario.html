@@ -11,13 +11,11 @@
 		<script>
 
 			// FUNCAO DE CADASTRO DE USUARIOS
-
 			function cadastrarUsuario() {
 
                 /*
                     PARTE QUE BUSCA ELEMENTOS DO HTML PELO ID E COLOCA ELES EM UMA VARIAVEL
                 **/
-
 				var elCadEmail = document.getElementById("cadEmail");
 				var elCadSenha = document.getElementById("cadSenha");
 				var elCadCPF = document.getElementById("cadCPF");
@@ -26,7 +24,6 @@
 				/*
                     PARTE ONDE SE CRIA UMA VARIAVEL COM OS ELEMENTOS QUE FORAM PEGOS 
                 **/
-
 				var usuario = {
 					email: elCadEmail.value,
 					senha: elCadSenha.value,
@@ -35,11 +32,9 @@
 				};
 				
 				// ABRE A REQUISICAO
-
 				var req = new XMLHttpRequest();
 
 				// NAO SEI 
-
 				req.onreadystatechange = function() {
 					if (this.readyState == XMLHttpRequest.DONE) {
 							//&& this.status == 201) {
@@ -49,7 +44,6 @@
 				}
 
 				// prepara e envia uma requisicao pra classe RecursoUsuario pra CADASTRAR os dados do usuario
-
 				req.open("POST", "usuarios/" + usuario.email, true);
 				req.setRequestHeader(
 						"Content-Type", 

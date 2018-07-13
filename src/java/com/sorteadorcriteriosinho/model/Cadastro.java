@@ -27,15 +27,8 @@ public class Cadastro {
     private EntityManager em = Persistence.createEntityManagerFactory("sorteadorCriteriosinho").createEntityManager();
 
     // metodo pra salvar o usuario - A CLASSE RecursoUsuario USA ESSE METODO
-    public void cadastrar(String email, String cpf, String nome, String senha) {
+    public void adicionarUsuario(Usuario u) {
     
-    	// criar usuario
-    	Usuario u = new Usuario();
-        u.setEmail(email);
-        u.setSenha(senha);
-        u.setCpf(cpf);
-        u.setNome(nome);
-
         // processo de salvar usuario
         em.getTransaction().begin();
         em.persist(u);
@@ -47,5 +40,30 @@ public class Cadastro {
     public Usuario obterUsuario(String email) {
         return em.find(Usuario.class, email);
     }
+    
+    // metodo pra salvar uma pessoa - A CLASSE RecursoPessoa USA ESSE METODO
+    public void cadastrarPessoa(Pessoa p) {
+    
+        // processo de salvar uma pessoa
+        em.getTransaction().begin();
+        em.persist(p);
+        em.getTransaction().commit();
+        
+    }
+
+    // encontra um usuario pelo email- A CLASSE RecursoUsuario USA ESSE METODO
+    public Pessoa obterPessoa(String email) {
+        return em.find(Pessoa.class, email);
+    }
+
+
+
+
+
+
+
+
+
+    
     
 }
