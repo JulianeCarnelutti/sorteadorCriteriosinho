@@ -6,6 +6,7 @@ Semana 02:
 Atividade - Prototipação da tela adicionar integrantes.
   Problemas ao enviar para o github devido não estar configurado o upstream, feito em sala com o professor na segunda semana,
   todavia, já estava desenvolvendo a mesma em .html. Entrega com atraso.
+  Dia 08/06 - Criada base do Projeto.
   
 Semana 03:
 Atividade - Desenvolver página em HTML.
@@ -19,4 +20,8 @@ Atividade - Ajustar html e começar backend.
   
 Semana 05:
 Atividade - Continuação semana 04.
-  Entregar o projeto funcionando, MVP.
+  Entregar o projeto funcionando, MVP. Resolvido os conflitos que apareceram e ajustado as referências das telas.
+
+Semana 06:
+Atividade - Continuação semana 04.
+  Pequenos ajustes. O sistema está dando erro 500.
