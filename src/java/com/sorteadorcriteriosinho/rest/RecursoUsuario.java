@@ -15,13 +15,19 @@ import javax.json.JsonObject;
 import javax.json.JsonObjectBuilder;
 import javax.json.stream.JsonGenerator;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.CookieParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
+
+import org.apache.velocity.VelocityContext;
 
 /**
  *
@@ -43,42 +49,33 @@ public class RecursoUsuario {
                     Response.Status.NOT_FOUND)
                     .build();
         }
-        /*
-        JsonObject objeto = Json.createObjectBuilder()
-                .add("email", u.getEmail())
-                .add("senha", u.getSenha())
-                .add("CPF", u.getCPF())
-                .add("nome", u.getNome()).build();
-        return Response.ok(objeto.toString()).build();
-        */
         
         StringWriter writer = new StringWriter();
         JsonGenerator gerador = Json.createGenerator(writer);
         
         gerador.writeStartObject();
-        gerador.write("email", u.getEmail());
-        gerador.write("senha", u.getSenha());
-        gerador.write("CPF", u.getCPF());
         gerador.write("nome", u.getNome());
+        gerador.write("email", u.getEmail());
+        gerador.write("CPF", u.getCPF());
+        gerador.write("senha", u.getSenha());
 
         gerador.writeEnd();
         
         gerador.flush();
         
-        return Response.ok(writer.toString()).build();
+        return Response.ok(writer.toString())
+        		.cookie(new NewCookie("emailLogado", email)).build();
     }
     
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response criarUsuario(JsonObject objeto) {
         String senha = objeto.getString("senha");
-        String CPF = objeto.getString("CPF");
         String nome = objeto.getString("nome");
         
         Usuario u = new Usuario();
         u.setEmail(objeto.getString("email"));
         u.setSenha(senha);
-        u.setSenha(CPF);
         u.setNome(nome);
         
         Cadastro.obterInstancia().adicionarUsuario(u);
