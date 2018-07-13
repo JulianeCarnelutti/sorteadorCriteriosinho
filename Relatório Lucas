@@ -1,18 +1,22 @@
-Relatório das Atividades - Semana 01:
+Relatório das Atividades - 
 
+Semana 01: Definição das atividades, feito em sala.
+
+Semana 02:
 Atividade - Prototipação da tela adicionar integrantes.
   Problemas ao enviar para o github devido não estar configurado o upstream, feito em sala com o professor na segunda semana,
   todavia, já estava desenvolvendo a mesma em .html. Entrega com atraso.
   
-Semana 02:
-
+Semana 03:
 Atividade - Desenvolver página em HTML.
   Feito a criação da página adicionar integrantes em .html, de acordo com os estilos das demais páginas de forma a seguir 
   o padrão estipulado pelos demais integrantes do grupo. Entregue o normalize.css para que as visualizações em navegadores
   não sejam diferentes, sigam o mesmo padrão em todos. Entrega em dia.
   
-Semana 03:
-  Atividade - Ajustar html e começar backend.
-  Estava muito doente para ir para a aula, realizei apenas o ajuste do html (ainda farei o commit) e comecei o backend.
-  
 Semana 04:
+Atividade - Ajustar html e começar backend.
+  Estava muito doente para ir para a aula, realizei apenas o ajuste do html (commit feito na aula da semana 05) e comecei o backend.
+  
+Semana 05:
+Atividade - Continuação semana 04.
+  Entregar o projeto funcionando, MVP.

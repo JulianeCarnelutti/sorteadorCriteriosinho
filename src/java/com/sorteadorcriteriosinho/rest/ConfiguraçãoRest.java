@@ -24,7 +24,8 @@ public class ConfiguraçãoRest extends Application {
         Set<Class<?>> classes = new HashSet<>();
         Collections.addAll(classes, 
                 RecursoUsuario.class,
-                RecursoPessoa.class);
+                RecursoPessoa.class,
+                RecursoPerfil.class);
         return classes;
     }
     
