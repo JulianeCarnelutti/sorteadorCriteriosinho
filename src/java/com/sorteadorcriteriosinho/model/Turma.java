@@ -26,7 +26,7 @@ public class Turma {
         return pessoas;
     }
 
-    public void setIdade(ArrayList<Pessoa> pessoas) {
+    public void setPessoas(ArrayList<Pessoa> pessoas) {
         this.pessoas = pessoas;
     }
 
