@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Turma {
+public class Grupo {
     	
     @id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

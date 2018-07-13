@@ -19,6 +19,7 @@ import javax.persistence.Table;
 public class Pessoa {
     	
 	@id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nome;
 	private int idade;
