@@ -56,6 +56,9 @@ public class Cadastro {
         return em.find(Pessoa.class, email);
     }
 
+    public void salvarUsuario(Usuario u) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 
 
